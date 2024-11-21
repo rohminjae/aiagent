@@ -29,11 +29,14 @@ with col3:
 
 # 4. 모델 활용
 st.subheader('모델 활용')
-st.write('**** 공부시간을 입력하세요.. 인공지능이 당신의 합격/불합격 분류 결과를 알려드립니다!')
+st.write('**** 아래의 순서에 따라 내용을 작성해주세요!')
 
-a = st.number_input(' _________ ', value=0)  
+a = st.number_input(' 나이(age) 입력 ', value=0)  
+b = st.number_input(' 성별 입력(sex) ', value=0)  
+c = st.number_input(' 흉통 유형 입력(cp) ', value=0)  
+d = st.number_input(' 평상시 혈압 입력(trestbps) ', value=0)  
 if st.button('합불분류'):             
-        input_data = [[ a ]]          
+        input_data = [[ a,b,c,d ]]          
         p = model._______(input_data)     
         if p[0] == 1 :
               st.success('인공지능 분류 결과는 ___입니다')
