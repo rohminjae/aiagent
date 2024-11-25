@@ -18,10 +18,10 @@ st.write(' - 모델 정확도 : 0.89')
 col1, col2,col3 = st.columns( 3 ) 
 with col1:
       st.subheader('데이터시각화1')
-      st.image('____________' ) 
+      st.image('시각화1.png' ) 
 with col2:
       st.subheader('데이터시각화2')
-      st.image('____________' ) 
+      st.image('시각화2.png' ) 
 
 
 # 4. 모델 활용
@@ -34,9 +34,9 @@ c = st.number_input(' 흉통 유형 입력(cp) ', value=0)
 d = st.number_input(' 평상시 혈압 입력(trestbps) ', value=0)  
 if st.button('합불분류'):             
         input_data = [[ a,b,c,d ]]          
-        p = model._______(input_data)     
+        p = model.predict(input_data)     
         if p[0] == 1 :
-              st.success('인공지능 분류 결과는 ___입니다')
+              st.success('당신의 심장병입니다!')
         else:
-              st.success('인공지능 분류 결과를 ____입니다')
+              st.success('당신은 심장병이 아닙니다!')
 
