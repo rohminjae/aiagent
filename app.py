@@ -29,7 +29,7 @@ st.subheader('모델 활용')
 st.write('**** 아래의 순서에 따라 내용을 작성해주세요!')
 
 a = st.number_input(' 나이(age) 입력 ', value=0)  
-b = st.number_input(' 성별 입력(sex) ', value=0)  
+b = st.number_input(' 성별 입력(sex) ',(남자:0 , 여자:1)',[0,1])
 c = st.number_input(' 흉통 유형 입력(cp) ', value=0)  
 d = st.number_input(' 평상시 혈압 입력(trestbps) ', value=0)  
 if st.button('합불분류'):             
